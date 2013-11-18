@@ -30,4 +30,17 @@ Usage:
 
     # Enumerate Items in Calendar
     $ol.Folders.Calendar.Items | Select -First 200 | Select -Property Categories, Subject, Start, Duration
+
+```
+
+To Be Implemented:
+-------
+
+```powershell
+
+    # Determine summary stats for Calendar
+    $ol.SummarizeSentMail([TimeSpan]::FromDays(7))
+
+    # Determine summary stats for Sent Mail
+    $ol.SummarizeCalendar([TimeSpan]::FromDays(7))
 ```
