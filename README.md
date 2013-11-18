@@ -22,9 +22,16 @@ Usage:
     # Enumerate mails in outbox
     $ol.Folders.Outbox.Items | Select -Property To, Subject, DeferredDeliveryTime
 
+    # Enumerate last 100 mails
+    $ol.Folders.SentMail.Items | Select -First 100  | Select -Property To, Subject, SentOn
+
+    # Enumerate all Calendar items
+
+
     #Send all mail in outbox
     $ol.SendAllInOutlook()
 
-    # Enumerate folders 
-    $ol.Folders
+
+    # Enumerate Items in Calendar
+    $ol.Folders.Calendar.Items | Select -First 200 | Select -Property Categories, Subject, Start, Duration
 ```
