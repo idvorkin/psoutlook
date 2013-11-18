@@ -25,12 +25,8 @@ Usage:
     # Enumerate last 100 mails
     $ol.Folders.SentMail.Items | Select -First 100  | Select -Property To, Subject, SentOn
 
-    # Enumerate all Calendar items
-
-
     #Send all mail in outbox
     $ol.SendAllInOutbox()
-
 
     # Enumerate Items in Calendar
     $ol.Folders.Calendar.Items | Select -First 200 | Select -Property Categories, Subject, Start, Duration
