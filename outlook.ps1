@@ -25,7 +25,16 @@ function global:Get-Outlook
         $ol.Folders[$folderName] = $mapi.GetDefaultFolder($folderValue)
     }
 
+    # Useful member if you use delayed send.
+    $ol | Add-Member -MemberType ScriptMethod -Name SendAllInOutbox -Value {
+        $this.Folders.Outbox.Items | % {
+            # Move Deferred Time To Past
+            $_.DeferredDeliveryTime = [DateTime]::Now- [TimeSpan]::FromMinutes(10)
+            $_.Send()
+        }
+    } 
+
     return $ol
 }
 
-# Get-Outlook
+Get-Outlook
