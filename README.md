@@ -29,7 +29,7 @@ Usage:
 
 
     #Send all mail in outbox
-    $ol.SendAllInOutlook()
+    $ol.SendAllInOutbox()
 
 
     # Enumerate Items in Calendar
