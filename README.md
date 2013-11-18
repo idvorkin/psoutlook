@@ -5,23 +5,22 @@ Outlook Powershell Module - Outlook automation from powershell. This will contai
 
 
 
-Summary:
+Usage:
+-------
 
 ```powershell
+     # Load plugin
+     . .\outlook.ps1
 
     # Return an object wrapping outlook functionality
     $ol = Get-Outlook()
 
-    # Return Folders
-    $ol.Folders
-
-    # Access specific folders
-    $ol.Folders.Inbox
-    $ol.Folders.Outbox
-
     # Enumerate mails in inbox
-    $ol.Folders.Inbox.items | -Property Subject 
+    $ol.Folders.Inbox.Items | Select -Property SenderName, Subject, ReceivedTime
 
     #Send all mail in outbox
     $ol.SendAllInOutbook()
+
+    # Enumerate folders 
+    $ol.Folders
 ```
