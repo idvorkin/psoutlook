@@ -7,6 +7,8 @@ Outlook Powershell Module - Outlook automation from powershell. This will contai
 
 Summary:
 
+```powershell
+
     # Return an object wrapping outlook functionality
     $ol = Get-Outlook()
 
@@ -22,4 +24,4 @@ Summary:
 
     #Send all mail in outbox
     $ol.SendAllInOutbook()
-
+```
