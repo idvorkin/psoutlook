@@ -1,7 +1,8 @@
 <Query Kind="Statements">
-  <Reference>&lt;ProgramFilesX86&gt;\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office15\Microsoft.Office.Interop.Outlook.dll</Reference>
+  <NuGetReference>Microsoft.Office.Interop.Outlook</NuGetReference>
   <Namespace>Microsoft.Office</Namespace>
   <Namespace>Microsoft.Office.Interop</Namespace>
+  <Namespace>Microsoft.Office.Interop.Outlook</Namespace>
   <Namespace>System</Namespace>
   <Namespace>System.Collections.Generic</Namespace>
   <Namespace>System.Configuration</Namespace>
@@ -9,7 +10,6 @@
   <Namespace>System.Runtime.InteropServices</Namespace>
   <Namespace>System.Text</Namespace>
   <Namespace>System.Threading.Tasks</Namespace>
-  <Namespace>Microsoft.Office.Interop.Outlook</Namespace>
 </Query>
 
 // C:\Users\igord\Documents\LINQPad Queries>c:\dropbox\bin_drop\lprun.exe -format=csv dumpCalendar.linq > c:\temp\CalenarItem.csv
